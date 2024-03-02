@@ -1023,3 +1023,19 @@ Info-Page notepad inspired
     height: 368px;
   }
 }
+
+/* copy contract button */
+#copy-ca {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  color: #000000;
+  background-color: #d6d6ce;
+  font-family: 'w98';
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  padding: 10px;
+  width: 200px;
+}
