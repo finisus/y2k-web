@@ -1,0 +1,24 @@
+body, html {
+  font-family: 'w98';
+  background-color: none;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+@font-face {
+  font-family: 'w98';
+  src: url(./font/w95fa.woff2) format('woff2');
+}
+#button_beginner,
+#button_intermediate,
+#button_expert {
+  display: none;
+}
+/******************************/
+#play_area {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  padding: 0 !important;
+  margin: 0 !important;
+}

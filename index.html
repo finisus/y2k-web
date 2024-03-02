@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$Y2K</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="./layout.css" rel="stylesheet" type="text/css">
+    <link href="./windows-98.css" rel="stylesheet" type="text/css">
+    <link href="./windows-default.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+    
+    <body>
+
+      <div id="desktop">
+
+        <div id="selection-box"></div>
+        
+        <div id="icons">
+          <div id="icons-line1">
+            <div id="bin-page" class="desktop-icon">
+              <img src="./metadata/win98icons/recycle_bin_full.ico">
+              <span>Recycle Bin</span>
+            </div>
+            <div class="desktop-icon-disabled">
+              <img src="./metadata/win98icons/computer_explorer.ico">
+              <span>My Computer</span>
+            </div>
+            <div class="desktop-icon-disabled">
+              <img src="./metadata/win98icons/directory_closed.ico">
+              <span>Documents</span>
+            </div>
+            <div id="minesweeper-icon" class="desktop-icon">
+              <img src="./metadata/win98icons/minesweeper.ico">
+              <span>Minesweeper</span>
+            </div>
+            <div id="network-icon" class="desktop-icon">
+              <img src="./metadata/win98icons/modem.ico">
+              <span>Network</span>
+            </div>
+            <div class="desktop-icon">
+              <img src="./metadata/win98icons/paint.ico">
+              <span>Paint</span>
+            </div>
+          </div>
+          <div id="icons-line2">
+            <div id="twitter-icon" class="desktop-icon">
+              <img src="./metadata/win98icons/keyboard.ico">
+              <span>Twitter</span>
+            </div>
+            <div id="telegram-icon" class="desktop-icon">
+              <img src="./metadata/win98icons/mailbox_world.ico">
+              <span>Telegram</span>
+            </div>
+            <div id="info-page" class="desktop-icon">
+              <img src="./metadata/win98icons/help_question_mark.ico">
+              <span>Token Info</span>
+            </div>
+            <div id="buy-page" class="desktop-icon">
+              <img src="./metadata/win98icons/html.ico">
+              <span>Buy $Y2K</span>
+            </div>
+          </div>
+
+          <!-- internet-explorer window -->
+
+          <div id="ie-window" style="display: none;">
+
+            <div id="ie-header">
+              <img id="ie-mini-icon" src="./metadata/win98icons/msie2.ico"
+              <span id="ie-title">Buy $Y2K! - Internet Explorer</span>
+              <div id="ie-controls">
+                <button id="ie-minimize">
+                  <img src="./metadata/window/minimize.png">
+                </button>
+                <button id="ie-maximize">
+                  <img src="./metadata/window/maximize.png">
+                </button>
+                <button id="ie-close">
+                  <img src="./metadata/window/close.png">
+                </button>
+              </div>
+            </div>
+
+            <div id="ie-menu">
+              <div id="ie-spacer"></div>
+              <button id="ie-menu-file" class="lightweight" tabindex="-1">File</button>
+              <button id="ie-menu-fav" class="lightweight" tabindex="-1">Favorites</button>
+              <button id="ie-menu-help" class="lightweight" tabindex="-1">Help</button>
+            </div>
+
+            <div id="ie-toolbar">
+              <div id="ie-spacer"></div>
+              <button id="ie-home" class="lightweight" tabindex="-1">
+                <img src="./metadata/toolbar/grey-icons/home.png">
+                <span>Home</span>
+              </button>
+              <button id="ie-favorites" class="lightweight" tabindex="-1">
+                <img src="./metadata/toolbar/grey-icons/favorites.png">
+                <span>Favorites</span>
+              </button>
+              <button id="ie-print" class="lightweight" tabindex="-1">
+                <img src="./metadata/toolbar/grey-icons/print.png">
+                <span>Print</span>
+              </button>
+            </div>
+
+            <div id="ie-address-bar-container">
+              <div id="ie-spacer"></div>
+              <span id="ie-address-title">Address</span>
+              <div id="ie-address-bar" class="inset-deep">
+                <img id="ie-mini-icon" src="./metadata/win98icons/msie2.ico">
+                <span id="ie-address-bar-text">Buy $Y2k - raydium.io/swap</span>
+              </div>
+            </div>
+
+            <div id="ie-content-wrapper" class="inset-deep">
+              <iframe id="ie-content" src=""></iframe>
+            </div>
+
+            <div id="ie-statusbar-container">
+              <span id="ie-status-1" class="inset-shallow">
+              </span>
+              <span id="ie-status-2" class="inset-shallow">
+              </span>
+              <span id="ie-status-3" class="inset-shallow">
+              </span>
+            </div>
+
+          </div>
+
+          <!-- recycle-bin window -->
+          <div id="bin-window" style="display: none;">
+            <div id="bin-header">
+              <img id="bin-mini-icon" src="./metadata/win98icons/recycle_bin_empty.ico">
+              <span id="bin-title">Recycle Bin</span>
+              <div id="bin-controls">
+                <button id="bin-minimize">
+                  <img src="./metadata/window/minimize.png">
+                </button>
+                <button id="bin-maximize">
+                  <img src="./metadata/window/maximize.png">
+                </button>
+                <button id="bin-close">
+                  <img src="./metadata/window/close.png">
+                </button>
+              </div>
+            </div>
+            <div id="bin-menu">
+              <div id="bin-spacer"></div>
+              <button id="bin-menu-file" class="lightweight" tabindex="-1">File</button>
+              <button id="bin-menu-fav" class="lightweight" tabindex="-1">Favorites</button>
+              <button id="bin-menu-help" class="lightweight" tabindex="-1">Help</button>
+            </div>
+            <div id="bin-toolbar">
+              <div id="bin-spacer"></div>
+              <button id="bin-home">
+                <img src="./metadata/toolbar/grey-icons/home.png">
+              </button>
+              <div id="bin-address-bar-container">
+                <div id="bin-address-bar" class="inset-deep">
+                  <span id="bin-address-bar-text">/y2k/C:/$Recycle.bin/</span>
+                </div>
+              </div>
+              <button id="bin-go">Go</button>
+            </div>
+            <div id="bin-content-wrapper" class="inset-deep">
+              <span id="bin-content">
+                <div id="bin-item-1">
+                  <img class="bin-item-image" src="./metadata/win98icons/package.ico">
+                  <span class="bin-item-text">Macintosh</span>
+                </div>
+                <div id="bin-item-2">
+                  <img class="bin-item-image" src="./metadata/win98icons/html.ico">
+                  <span class="bin-item-text">$WIF</span>
+                </div>
+                <div id="bin-item-3">
+                  <img class="bin-item-image" src="./metadata/win98icons/html.ico">
+                  <span class="bin-item-text">$BONK</span>
+                </div>
+                <div id="bin-item-4">
+                  <img class="bin-item-image" src="./metadata/win98icons/html.ico">
+                  <span class="bin-item-text">$AMC</span>
+                </div>
+                <div id="bin-item-5">
+                  <img class="bin-item-image" src="./metadata/win98icons/html.ico">
+                  <span class="bin-item-text">$GameStop</span>
+                </div>
+              </span>
+            </div>
+            <div id="bin-statusbar-container">
+              <span id="bin-status-1" class="inset-shallow">
+              </span>
+              <span id="bin-status-2" class="inset-shallow">
+              </span>
+              <span id="bin-status-3" class="inset-shallow">
+              </span>
+            </div>
+          </div>
+
+          <!-- info-page window -->
+          <div id="info-window" style="display: none;">
+            <div id="info-header">
+              <img id="info-mini-icon" src="./metadata/win98icons/notepad.ico"
+              <span id="info-title">$Y2K - Token Info</span>
+              <div id="info-controls">
+                <button id="info-minimize">
+                  <img src="./metadata/window/minimize.png">
+                </button>
+                <button id="info-maximize">
+                  <img src="./metadata/window/maximize.png">
+                </button>
+                <button id="info-close">
+                  <img src="./metadata/window/close.png">
+                </button>
+              </div>
+            </div>
+            <div id="info-menu">
+              <div id="info-spacer"></div>
+              <button id="info-menu-file" class="lightweight" tabindex="-1">File</button>
+              <button id="info-menu-fav" class="lightweight" tabindex="-1">Favorites</button>
+              <button id="info-menu-help" class="lightweight" tabindex="-1">Help</button>
+            </div>
+            <div id="info-content-wrapper" class="inset-deep">
+              <span id="info-content">
+                $Y2k - Year 2000
+                <br>
+                <br>
+                Contract Address: EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
+                <br>
+
+              </span>
+            </div>
+            <div id="info-statusbar-container">
+              <span id="info-status-1" class="inset-shallow">
+              </span>
+              <span id="info-status-2" class="inset-shallow">
+              </span>
+              <span id="info-status-3" class="inset-shallow">
+              </span>
+            </div>
+          </div>
+
+          <!-- minesweeper-window -->
+          <div id="minesweeper-window" style="display: none;">
+
+            <div id="minesweeper-header">
+
+              <img id="minesweeper-mini-icon" src="./metadata/win98icons/minesweeper.ico">
+              <span id="minesweeper-title">Minesweeper</span>
+
+              <div id="minesweeper-controls">
+                <button id="minesweeper-minimize">
+                  <img src="./metadata/window/minimize.png">
+                </button>
+                <button id="minesweeper-maximize">
+                  <img src="./metadata/window/maximize.png">
+                </button>
+                <button id="minesweeper-close">
+                  <img src="./metadata/window/close.png">
+                </button>
+              </div>
+
+            </div>
+
+            <div id="minesweeper-menu">
+              <button id="minesweeper-menu-game" class="lightweight" tabindex="-1">Game</button>
+              <button id="minesweeper-menu-help" class="lightweight" tabindex="-1">Help</button>
+            </div>
+            
+            <div id="minesweeper-wrapper">
+              <iframe src="./minesweeper/index.html"></iframe>
+            </div>
+
+            <!--   dropdown menu for game settings -->
+            <div id="minesweeper-menu-game-dropdown" class="settings-dropdown outset-deep" style="display: none;">
+              <button class="game-setting lightweight" data-setting="beginner">Beginner</button>
+              <button class="game-setting lightweight" data-setting="intermediate">Intermediate</button>
+              <button class="game-setting lightweight" data-setting="expert">Expert</button>
+              <button id="minesweeper-menu-dropdown-exit" class="game-setting lightweight" data-setting="exit">Exit</button>
+            </div>
+
+            <!-- dropdown menu for help -->
+            <div id="minesweeper-menu-help-dropdown" class="help-dropdown outset-deep" style="display: none;">
+              <button class="lightweight">Help Topics</button>
+              <button class="lightweight">About Minesweeper</button>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="taskbar">
+
+          <div id="start-page" class="outset-deep" style="display: none;">
+
+            <div id="win-banner-container">
+
+              <span id="win-banner">Windows98</span>
+
+            </div>
+
+            <div id="main-banner-container">
+              
+              <div id="banner-text-1" class="banner-text">Y2K</div>
+              <div id="banner-text-2" class="banner-text">2000s</div>
+              <div id="banner-text-3" class="banner-text">4<br>0<br>4</div>
+
+              <div id="attention-window" class="outset-deep">
+                <div class="blinking">
+                  <i id="attention-icon" class="fa fa-exclamation-triangle"></i>
+                  <p>BUY<br>NOW!</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <button id="start-button">
+            <img src="./metadata/win98icons/windows.ico">
+            <span>Start</span>
+          </button>
+
+          <div id="taskbar-toolbar" class="inset-deep">
+            <div id="task-scheduler">
+              <img id="task-scheduler-img" src="./metadata/win98icons/sched_tasks.ico">
+            </div>
+            <div id="sound-toggle">
+              <img id="sound-toggle-img" src="./metadata/win98icons/loudspeaker_rays.ico">
+            </div>
+            <div id="clock">
+              <span>00:00</span>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+      <script src="./app.js"></script>
+    </body>
+</html>
