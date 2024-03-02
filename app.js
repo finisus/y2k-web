@@ -42,11 +42,11 @@ desktop.addEventListener('mouseup', function() {
 */
 const telegramIcon = document.getElementById('telegram-icon');
 telegramIcon.addEventListener('click', function() {
-  window.open('https://telegram.org/', '_blank');
+  window.open('https://t.me/y2ksol', '_blank');
 });
 const twitterIcon = document.getElementById('twitter-icon');
 twitterIcon.addEventListener('click', function() {
-  window.open('https://twitter.com/finisusdoteth/', '_blank');
+  window.open('https://twitter.com/Y2KSolOfficial/', '_blank');
 });
 const networkIcon = document.getElementById('network-icon');
 const audio = new Audio('./metadata/dialup.mp3');
