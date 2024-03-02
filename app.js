@@ -64,7 +64,7 @@ networkIcon.addEventListener('click', () => {
 // 
 document.getElementById('buy-page').addEventListener('click', function() {
   document.getElementById('ie-window').style.display = 'block';
-  document.getElementById('ie-content').src="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R&fixed=in";
+  document.getElementById('ie-content').src="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=CQ6qQ6hkT3kYvCJ9hwFR4CT9kSrzUuW9VHByXqpbviTm";
 });
 
 document.getElementById('ie-close').addEventListener('click', function() {
@@ -266,11 +266,11 @@ window.addEventListener('click', function(event) {
 });
 
 document.getElementById('attention-window').addEventListener('click', function() {
-  window.open('https://raydium.io', '_blank');
+  window.open('https://raydium.io/swap/?inputCurrency=sol&outputCurrency=CQ6qQ6hkT3kYvCJ9hwFR4CT9kSrzUuW9VHByXqpbviTm', '_blank');
 })
 
 const copyButton = document.getElementById("copy-ca");
-const textToCopy = "test contract";
+const textToCopy = "CQ6qQ6hkT3kYvCJ9hwFR4CT9kSrzUuW9VHByXqpbviTm";
 copyButton.addEventListener("click", async () => {
   try {
     // Try the modern Clipboard API first (if supported)
