@@ -264,3 +264,7 @@ window.addEventListener('click', function(event) {
     startButton.className = 'outset-deep';
   }
 });
+
+document.getElementById('attention-window').addEventListener('click', function() {
+  window.open('https://raydium.io', '_blank');
+})
