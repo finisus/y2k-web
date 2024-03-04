@@ -1008,6 +1008,168 @@ Info-Page notepad inspired
 }
 
 /*--------------------------------------------------
+  Meme Generator
+--------------------------------------------------*/
+#meme-gen-window {
+  z-index: 10;
+  position: fixed;
+  left: 50%;
+  top: calc(50% - 12px);
+  transform: translate(-50%,-50%);
+  width: 330px;
+  height: 450px;
+  padding: 3px;
+  background-color: #c3c3c3;
+  border-radius: 0;
+  box-sizing: border-box;
+  box-shadow: inset 1px 1px 0px #fff,
+              inset -1px -1px 0px #fff,
+              0 2px 0px #000,
+              2px 0 0px #000; 
+}
+#meme-gen-header {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #010081, #0289cc);
+  color: #fdffff;
+  font-family: 'w98';
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+  height: 20px;
+  padding: 0 2px;
+  margin-bottom: 1px;
+}
+#meme-gen-mini-icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 2px;
+}
+#meme-gen-controls {
+  display: flex;
+  margin-left: auto;
+}
+#meme-gen-minimize,
+#meme-gen-maximize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d6d6ce;
+  width: 16px;
+  height: 14px;
+  cursor: pointer;
+  margin-right: 2px;
+}
+#meme-gen-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d6d6ce;
+  width: 16px;
+  height: 14px;
+  cursor: pointer;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+#meme-gen-content-wrapper {
+  margin-top: 4px;
+  width: 99%;
+  height: calc(100% - 28px);
+}
+.meme-gen-action-button-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  position: absolute;
+  bottom: 0%;
+  margin-bottom: 3px;
+  margin-left: 2px;
+  width: calc(100% - 4px);
+}
+.gridItem1 {
+  grid-column: 1/2;
+  grid-row: 1;
+}
+.gridItem2 {
+  grid-column: 2/2;
+  grid-row: 1;
+}
+.meme-gen-action-buttons {
+  font-family: 'w98';
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 4px;
+}
+
+.style-image-upload {
+  display: flex;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: 2px;
+  border: none;
+  position: absolute;
+  bottom: calc(0% + 33px);
+  margin-bottom: 0px;
+  margin-left: 2px;
+}
+.style-image-upload span {
+  font-family: 'w98';
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.style-image-upload span:active {
+  border: 2px solid #000000;
+}
+#file-name-support-text {
+  margin-left: 8px;
+}
+.style-image-upload p {
+  font-family: 'w98';
+  font-weight: 500;
+  font-size: 12px;
+}
+input[type=file] {
+  font-family: 'w98';
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+/* Hides ugly upload button */
+input[type=file]::file-selector-button {
+  display: none;
+}
+
+#meme-gen-image-window-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+  font-family: 'w98';
+  font-weight: 400;
+  font-size: 14px;
+}
+#meme-gen-image-window {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+  width: 300px;
+  background-color: #008080;
+}
+#result {
+  max-width: 100%;
+  display: none; /* Initially hide the result image */
+}
+
+/*--------------------------------------------------
   Mobile Optimizations
 --------------------------------------------------*/
 @media screen and (max-width: 500px) {

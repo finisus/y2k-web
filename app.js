@@ -289,3 +289,156 @@ copyButton.addEventListener("click", async () => {
     console.log("Text copied successfully using legacy approach");
   }
 });
+
+// Meme Generator
+/* open window with desktop icon */
+document.getElementById('meme-gen-page').addEventListener('click', function() {
+  document.getElementById('meme-gen-window').style.display = 'block';
+});
+/* close window with action button */
+document.getElementById('meme-gen-close').addEventListener('click', function() {
+  document.getElementById('meme-gen-window').style.display = 'none';
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const uploadInput = document.getElementById('meme-gen-upload');
+  const generateBtn = document.getElementById('meme-gen-generate');
+  const downloadBtn = document.getElementById('meme-gen-download');
+  const preResultImg = document.getElementById('pre-result');
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+  const result = document.getElementById('result');
+  const borderImage = new Image();
+  borderImage.src = './metadata/border.png';
+
+  canvas.width = 300;
+  canvas.height = 300;
+
+
+  uploadInput.onchange = function(e) {
+    const file = e.target.files[0];
+    if (file) {
+      preResultImg.style.display = 'none';
+
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        const img = new Image();
+        img.onload = function() {
+          // Clear the canvas
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+          // Draw the uploaded image resized to 170x170 at position (70, 50)
+          ctx.drawImage(img, 70, 24, 160, 160);
+
+          // Optionally, draw the border image here or in the generate button click event
+          // This ensures the border is on top of the uploaded image
+          // ctx.drawImage(borderImage, 0, 0, 300, 300);
+
+          canvas.style.display = 'inline-block'; // Show canvas
+          result.style.display = 'none'; // Hide result
+        }
+        img.src = event.target.result;
+      }
+      reader.readAsDataURL(file);
+    }
+  };
+
+  generateBtn.onclick = function() {
+    // Ensure border image is drawn last so it's on top
+    if (borderImage.complete) {
+      ctx.drawImage(borderImage, 0, 0, 300, 300);
+      result.src = canvas.toDataURL('image/png');
+      canvas.style.display = 'none';
+      result.style.display = 'inline-block'; // Show result
+    } else {
+      console.error('Border image not loaded');
+    }
+  };
+
+  downloadBtn.onclick = function() {
+    if (result.src) {
+      const link = document.createElement('a');
+      link.download = 'meme.png';
+      link.href = result.src;
+      link.click();
+    }
+  };
+});
+
+/*
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const uploadInput = document.getElementById('meme-gen-upload');
+  const generateBtn = document.getElementById('meme-gen-generate');
+  const downloadBtn = document.getElementById('meme-gen-download');
+  const preResultImg = document.getElementById('pre-result');
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+  const result = document.getElementById('result');
+  const borderImage = new Image();
+  borderImage.src = './metadata/border.png';
+
+  // Function to adjust image size
+  function adjustImageSize(imgWidth, imgHeight, maxWidth, maxHeight) {
+    let newWidth = imgWidth;
+    let newHeight = imgHeight;
+
+    if (imgWidth > maxWidth || imgHeight > maxHeight) {
+      const ratio = Math.min(maxWidth / imgWidth, maxHeight / imgHeight);
+      newWidth = imgWidth * ratio;
+      newHeight = imgHeight * ratio;
+    }
+
+    return { width: newWidth, height: newHeight };
+  }
+
+  uploadInput.onchange = function(e) {
+    const file = e.target.files[0];
+    if (file) {
+      preResultImg.style.display = 'none';
+
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        const img = new Image();
+        img.onload = function() {
+          // Adjust image size to fit within maximum dimensions
+          const maxCanvasWidth = 300; // Maximum canvas width
+          const maxCanvasHeight = 300; // Maximum canvas height
+          const adjustedSize = adjustImageSize(img.width, img.height, maxCanvasWidth, maxCanvasHeight);
+
+          canvas.width = adjustedSize.width;
+          canvas.height = adjustedSize.height;
+          ctx.drawImage(img, 0, 0, adjustedSize.width, adjustedSize.height);
+          canvas.style.display = 'inline-block'; // Show canvas
+          result.style.display = 'none'; // Hide result
+        }
+        img.src = event.target.result;
+      }
+      reader.readAsDataURL(file);
+    }
+  };
+
+  generateBtn.onclick = function() {
+    if (borderImage.complete) { // Check if border image has loaded
+      ctx.drawImage(borderImage, 0, 0, canvas.width, canvas.height);
+      result.src = canvas.toDataURL('image/png');
+      canvas.style.display = 'none';
+      result.style.display = 'inline-block'; // Show result
+    } else {
+      console.error('Border image not loaded');
+    }
+  };
+
+  downloadBtn.onclick = function() {
+    if (result.src) {
+      const link = document.createElement('a');
+      link.download = 'meme.png';
+      link.href = result.src;
+      link.click();
+    }
+  };
+});
+
+
+*/

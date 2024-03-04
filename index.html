@@ -62,6 +62,10 @@
               <img src="./metadata/win98icons/html.ico">
               <span>Buy $Y2K</span>
             </div>
+            <div id="meme-gen-page" class="desktop-icon">
+              <img src="./metadata/win98icons/camera3_plus.ico">
+              <span>PFP Generator</span>
+            </div>
           </div>
 
           <!-- internet-explorer window -->
@@ -296,6 +300,52 @@
             </div>
 
           </div>
+
+          <!-- Meme Generator Window -->
+          <div id="meme-gen-window" style="display: none;">
+            
+            <div id="meme-gen-header">
+              <img id="meme-gen-mini-icon" src="./metadata/win98icons/camera3_plus.ico">
+              <span id="meme-gen-title">Y2K PFP Generator</span>
+
+              <div id="meme-gen-controls">
+                <button id="meme-gen-minimize">
+                  <img src="./metadata/window/minimize.png">
+                </button>
+                <button id="meme-gen-maximize">
+                  <img src="./metadata/window/maximize.png">
+                </button>
+                <button id="meme-gen-close">
+                  <img src="./metadata/window/close.png">
+                </button>
+              </div>
+            </div>
+          
+            <div id="meme-gen-content-wrapper" class="inset-deep">
+
+              <div id="meme-gen-image-window" class="inset-shallow">
+                <img id="pre-result" src="./metadata/border.png" style="display: block; height: 300px; width: 300px;">
+                <canvas id="canvas" style="display: inline-block;"></canvas>
+                <img id="result">
+              </div>
+              <span id="meme-gen-image-window-title">Preview</span>
+
+              <label class="style-image-upload">
+                <span class="outset-deep">UPLOAD</span>
+                <p id="file-name-support-text">File Name: [</p>
+                <input id="meme-gen-upload" type="file" accept="image/*">
+                <p>]</p>
+              </label>
+
+              <div class="meme-gen-action-button-container">
+                <button id="meme-gen-generate" class="meme-gen-action-buttons gridItem1">GENERATE</button>
+                <button id="meme-gen-download" class="meme-gen-action-buttons gridItem2">DOWNLOAD</button>
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
 
         <div id="taskbar">
@@ -346,5 +396,6 @@
         
       </div>
       <script src="./app.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/interactjs@1.10.11/dist/interact.min.js"></script>
     </body>
 </html>
